@@ -4,6 +4,7 @@ import { actions } from './constants.js';
 import {
   saveToFileWithoutInput,
   showToConsoleFromInput,
+  saveToInputFromOutput,
 } from './saveOutput.js';
 
 const checkNumber = (value) => {
@@ -43,4 +44,11 @@ if (!options.input && !options.output) {
   saveToFileWithoutInput(options.shift, options.action, options.output);
 } else if (!options.output) {
   showToConsoleFromInput(options.shift, options.action, options.input);
+} else {
+  saveToInputFromOutput(
+    options.shift,
+    options.action,
+    options.input,
+    options.output,
+  );
 }

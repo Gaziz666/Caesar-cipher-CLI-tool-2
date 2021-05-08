@@ -1,6 +1,11 @@
 ## Task 1. Caesar cipher CLI tool
 
-to start please write **node my_caesar_cli** and 4 options
+**Install:**
+
+1. git clone https://github.com/Gaziz666/Caesar-cipher-CLI-tool-2.git from develop branch
+2. npm install
+
+to start please write **node src/index** and 4 options
 CLI tool should accept 4 options (short alias or full name):
 
 1.  **-s, --shift**: a shift (positive integer)
@@ -11,22 +16,22 @@ CLI tool should accept 4 options (short alias or full name):
 **Details:**
 
 1. Action (encode/decode) and the shift are required.
-3. If the input file is missed - use stdin as an input source.
-4. If the output file is missed - use stdout as an output destination.
-5. If the input and/or output file is given but doesn't exist or System can't read it (e.g. because of permissions or it is a directory) - error.
+2. If the input file is missed - use stdin as an input source.
+3. If the output file is missed - use stdout as an output destination.
+4. If the input and/or output file is given but doesn't exist or System can't read it (e.g. because of permissions or it is a directory) - error.
 
 **Usage example:**
 
 ```bash
-$ node my_caesar_cli -a encode -s 7 -i "./input.txt" -o "./output.txt"
+$ node src/index -a encode -s 7 -i "./input.txt" -o "./result.txt"
 ```
 
 ```bash
-$ node my_caesar_cli --action encode --shift 7 --input plain.txt --output encoded.txt
+$ node src/index --action encode --shift 7 --input input.txt --output result.txt
 ```
 
 ```bash
-$ node my_caesar_cli --action decode --shift 7 --input decoded.txt --output plain.txt
+$ node src/index --action decode --shift 7 --input input.txt --output result.txt
 ```
 
 > input.txt
@@ -34,4 +39,3 @@ $ node my_caesar_cli --action decode --shift 7 --input decoded.txt --output plai
 
 > output.txt
 > `Aopz pz zljyla. Tlzzhnl hivba "_" zftivs!`
-
